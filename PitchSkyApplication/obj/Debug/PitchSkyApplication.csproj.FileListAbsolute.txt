@@ -1,0 +1,11 @@
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchSkyApplication.dll
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchSkyApplication.pdb
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.csprojAssemblyReference.cache
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CoreCompileInputs.cache
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.dll
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.pdb
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\Framework.dll
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchApplication.dll
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\Framework.pdb
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchApplication.pdb
+E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CopyComplete

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PitchUndergroundApplication.PitchUnderground">
+    <Position X="5.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PitchUnderground.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PitchUndergroundApplication.PitchUndergroundImplementation" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAQAAACAAAAAIAEACAAACAg=</HashCode>
+      <FileName>PitchUndergroundImplementation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="PitchUndergroundApplication.IPitchUnderground">
+    <Position X="3.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACAg=</HashCode>
+      <FileName>IPitchUnderground.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

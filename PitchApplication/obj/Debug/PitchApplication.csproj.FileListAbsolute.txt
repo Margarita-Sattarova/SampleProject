@@ -1,0 +1,9 @@
+E:\GLSampleApplication\SampleApplication\PitchApplication\bin\Debug\PitchApplication.dll
+E:\GLSampleApplication\SampleApplication\PitchApplication\bin\Debug\PitchApplication.pdb
+E:\GLSampleApplication\SampleApplication\PitchApplication\bin\Debug\Framework.dll
+E:\GLSampleApplication\SampleApplication\PitchApplication\bin\Debug\Framework.pdb
+E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.csprojAssemblyReference.cache
+E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.csproj.CoreCompileInputs.cache
+E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.csproj.CopyComplete
+E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.dll
+E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.pdb

@@ -1,0 +1,6 @@
+E:\GLSampleApplication\SampleApplication\Framework\bin\Debug\Framework.dll
+E:\GLSampleApplication\SampleApplication\Framework\bin\Debug\Framework.pdb
+E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.csprojAssemblyReference.cache
+E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
+E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.dll
+E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.pdb
