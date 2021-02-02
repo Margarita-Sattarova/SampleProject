@@ -5,6 +5,15 @@ namespace PitchApplication {
         protected IPitchCommon PitchCommon;
 
         public bool CanMove { get; set; } = true;
+
+        public bool IsRunning { get; set; } = true;
+
+        public virtual void Initialize()
+        {
+            IsOnline = true;
+        }
+
+        #region Commands
         public bool IsOnline {
             get => PitchCommon.IsOnline;
             set => PitchCommon.IsOnline = value;
@@ -30,32 +39,42 @@ namespace PitchApplication {
             set => PitchCommon.SkipNextMoveCommand = value;
         }
 
-        public virtual void Initialize() {
-            IsOnline = true;
-            InitializeCommandAvailability();
+        #endregion
+
+        protected PitchCommonDefinition(IPitchCommon pitchCommon)
+        {
+            PitchCommon = pitchCommon;
         }
 
-        private void InitializeCommandAvailability() {
-            MoveNextCommand.Available = CanMove;
-            MovePreviousCommand.Available = CanMove;
-            ReturnToStartCommand.Available = CanMove;
-            SkipNextMoveCommand.Available = CanMove;
+        public void SomeMethod1()
+        {
+            RefreshCommandsAccess(false);
         }
 
-        public void MoveNext() {
-            MoveNextCommand.Enabled = true;
+        public void SomeMethod2()
+        {
+            RefreshCommandsAccess(false);
         }
 
-        public void MovePrevious() {
-            MovePreviousCommand.Enabled = true;
+        public void SomeMethod3()
+        {
+            RefreshCommandsAccess(false);
         }
 
-        public void ReturnToStart() {
-            ReturnToStartCommand.Enabled = true;
+        protected abstract ICommandsAvailability GetCommandsAvailabilityObject();
+
+        protected abstract ICommandsAccess GetCommandsAccessObject();
+
+        protected void DisableCommands()
+        {
+            ICommandsAccess commandsAccess = GetCommandsAccessObject();
+            commandsAccess.RefreshCommandsAccess(true);
         }
 
-        public void SkipNextMove() {
-            SkipNextMoveCommand.Enabled = true;
+        public void RefreshCommandsAccess(bool disableAll)
+        {
+            ICommandsAccess commandsAccess = GetCommandsAccessObject();
+            commandsAccess.RefreshCommandsAccess(disableAll);
         }
     }
 }
