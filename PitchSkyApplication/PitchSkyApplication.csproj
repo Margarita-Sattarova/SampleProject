@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPitchSky.cs" />
+    <Compile Include="ISkyMovement.cs" />
     <Compile Include="PitchSky.cs" />
     <Compile Include="PitchSkyImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

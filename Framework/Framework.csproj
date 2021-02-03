@@ -48,6 +48,7 @@
     <Compile Include="ICommandsAccess.cs" />
     <Compile Include="ICommandsAccessOwner.cs" />
     <Compile Include="ICommandsAvailability.cs" />
+    <Compile Include="IHost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

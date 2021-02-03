@@ -2,7 +2,7 @@
 
 namespace PitchApplication {
     public interface IPitch : IPitchCommon {
-        ICommand RunCommand { get; set; }
-        ICommand JumpCommand { get; set; }
+        ICommand RunCommand { get; }
+        ICommand JumpCommand { get; }
     }
 }
