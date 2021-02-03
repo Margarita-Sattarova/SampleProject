@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonMovement.cs" />
+    <Compile Include="CommonPitchHost.cs" />
+    <Compile Include="ICommonMovement.cs" />
+    <Compile Include="ICommonPitchHost.cs" />
     <Compile Include="IPitch.cs" />
     <Compile Include="IPitchCommandsAccessOwner.cs" />
     <Compile Include="IPitchCommon.cs" />

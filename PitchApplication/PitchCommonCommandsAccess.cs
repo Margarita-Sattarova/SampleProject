@@ -1,5 +1,4 @@
-﻿using System;
-using Framework;
+﻿using Framework;
 
 namespace PitchApplication {
     public abstract class PitchCommonCommandsAccess<TOwner> : CommandsAccess<TOwner> where TOwner : IPitchCommonCommandsAccessOwner {
@@ -10,10 +9,10 @@ namespace PitchApplication {
 
             IPitchCommon pitch = Owner;
 
-            pitch.MoveNextCommand.Enabled = allowCommands && Owner.EnabledMoveNextCommand;
-            pitch.MovePreviousCommand.Enabled = allowCommands && Owner.EnabledMovePreviousCommand;
-            pitch.ReturnToStartCommand.Enabled = allowCommands && Owner.EnabledReturnToStartCommand;
-            pitch.SkipNextMoveCommand.Enabled = allowCommands && Owner.EnabledSkipNextMoveCommand;
+            pitch.MoveNextCommand.Enabled = allowCommands && Owner.EnabledMoveNextCommand();
+            pitch.MovePreviousCommand.Enabled = allowCommands && Owner.EnabledMovePreviousCommand();
+            pitch.ReturnToStartCommand.Enabled = allowCommands && Owner.EnabledReturnToStartCommand();
+            pitch.SkipNextMoveCommand.Enabled = allowCommands && Owner.EnabledSkipNextMoveCommand();
         }
     }
 }

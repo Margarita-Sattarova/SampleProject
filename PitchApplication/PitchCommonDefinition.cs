@@ -3,57 +3,117 @@
 namespace PitchApplication {
     public abstract class PitchCommonDefinition : IPitchCommon {
         protected IPitchCommon PitchCommon;
+        public IHost Host { get; internal set; }
+        ICommonPitchHost CommonPitchHost => (ICommonPitchHost)Host;
+        public bool IsRunning => Host.IsRunning;
 
-        public bool CanMove { get; set; } = true;
-
-        public bool IsRunning { get; set; } = true;
-
-        public virtual void Initialize() {
-            IsOnline = true;
-        }
+        public virtual void Initialize() {  }
 
         #region Commands
-        public bool IsOnline {
-            get => PitchCommon.IsOnline;
-            set => PitchCommon.IsOnline = value;
-        }
 
         public ICommand MoveNextCommand {
-            get => PitchCommon.MoveNextCommand;
-            set => PitchCommon.MoveNextCommand = value;
+            get {
+                if (vMoveNextCommand == null) {
+                    vMoveNextCommand = new Command { Name = "MoveNext" };
+                }
+                return vMoveNextCommand;
+            }
         }
+
+        private ICommand vMoveNextCommand;
+
 
         public ICommand MovePreviousCommand {
-            get => PitchCommon.MovePreviousCommand;
-            set => PitchCommon.MovePreviousCommand = value;
+            get {
+                if (vMovePreviousCommand == null) {
+                    vMovePreviousCommand = new Command { Name = "MoveBack" };
+                }
+                return vMovePreviousCommand;
+            }
         }
+
+        private ICommand vMovePreviousCommand;
 
         public ICommand ReturnToStartCommand {
-            get => PitchCommon.ReturnToStartCommand;
-            set => PitchCommon.ReturnToStartCommand = value;
+            get {
+                if (vReturnToStartCommand == null) {
+                    vReturnToStartCommand = new Command { Name = "ReturnToStart" };
+                }
+                return vReturnToStartCommand;
+            }
         }
 
+        private ICommand vReturnToStartCommand;
+
         public ICommand SkipNextMoveCommand {
-            get => PitchCommon.SkipNextMoveCommand;
-            set => PitchCommon.SkipNextMoveCommand = value;
+            get {
+                if (vSkipNextMoveCommand == null) {
+                    vSkipNextMoveCommand = new Command { Name = "SkipNextMove" };
+                }
+                return vSkipNextMoveCommand;
+            }
         }
+
+        private ICommand vSkipNextMoveCommand;
 
         #endregion
 
-        protected PitchCommonDefinition(IPitchCommon pitchCommon) {
+        protected PitchCommonDefinition(IPitchCommon pitchCommon, IHost host) {
             PitchCommon = pitchCommon;
+            Host = host;
         }
 
-        public void SomeMethod1() {
+        public void MakeNextStep() {
+            if (!IsRunning) { return; }
+            
+            if(!MoveNextCommand.Enabled) {
+               
+            }
             RefreshCommandsAccess(false);
         }
 
-        public void SomeMethod2() {
+        public void MakePreviousStep() {
+            if (!IsRunning) { return; }
+
+            if (!MovePreviousCommand.Enabled) {
+                
+            }
+
             RefreshCommandsAccess(false);
         }
 
-        public void SomeMethod3() {
+        public void ReturnToStart() {
+            if (!IsRunning) { return; }
+
+            if (!ReturnToStartCommand.Enabled) {
+               
+            }
             RefreshCommandsAccess(false);
+        }
+
+        public void SkipNextMove() {
+            if (!IsRunning) { return; }
+
+            if (!SkipNextMoveCommand.Enabled) {
+
+            }
+            RefreshCommandsAccess(false);
+        }
+
+        public virtual bool EnabledMoveNextCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsNextMove;
+        }
+
+        public virtual bool EnabledMovePreviousCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsPreviousMove;
+        }
+
+        public virtual bool EnabledReturnToStartCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsReturnToStart;
+        }
+
+        public virtual bool EnabledSkipNextMoveCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsSkipNextMove;
         }
 
         protected abstract ICommandsAvailability GetCommandsAvailabilityObject();

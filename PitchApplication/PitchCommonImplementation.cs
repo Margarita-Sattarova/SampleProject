@@ -5,9 +5,7 @@ namespace PitchApplication {
 
         private IPitch Pitch => (IPitch)PitchCommon;
 
-        public PitchCommonImplementation(IPitch pitch) : base(pitch) {
-
-        }
+        public PitchCommonImplementation(IPitch pitch, IHost host) : base(pitch, host) { }
 
         public override void Initialize() {
             base.Initialize();
