@@ -8,8 +8,7 @@ namespace PitchApplication {
 
         public bool IsRunning { get; set; } = true;
 
-        public virtual void Initialize()
-        {
+        public virtual void Initialize() {
             IsOnline = true;
         }
 
@@ -41,23 +40,19 @@ namespace PitchApplication {
 
         #endregion
 
-        protected PitchCommonDefinition(IPitchCommon pitchCommon)
-        {
+        protected PitchCommonDefinition(IPitchCommon pitchCommon) {
             PitchCommon = pitchCommon;
         }
 
-        public void SomeMethod1()
-        {
+        public void SomeMethod1() {
             RefreshCommandsAccess(false);
         }
 
-        public void SomeMethod2()
-        {
+        public void SomeMethod2() {
             RefreshCommandsAccess(false);
         }
 
-        public void SomeMethod3()
-        {
+        public void SomeMethod3() {
             RefreshCommandsAccess(false);
         }
 
@@ -65,14 +60,12 @@ namespace PitchApplication {
 
         protected abstract ICommandsAccess GetCommandsAccessObject();
 
-        protected void DisableCommands()
-        {
+        protected void DisableCommands() {
             ICommandsAccess commandsAccess = GetCommandsAccessObject();
             commandsAccess.RefreshCommandsAccess(true);
         }
 
-        public void RefreshCommandsAccess(bool disableAll)
-        {
+        public void RefreshCommandsAccess(bool disableAll) {
             ICommandsAccess commandsAccess = GetCommandsAccessObject();
             commandsAccess.RefreshCommandsAccess(disableAll);
         }

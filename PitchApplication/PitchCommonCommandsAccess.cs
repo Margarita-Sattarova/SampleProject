@@ -1,14 +1,11 @@
 ﻿using System;
 using Framework;
 
-namespace PitchApplication
-{
-    public abstract class PitchCommonCommandsAccess<TOwner> : CommandsAccess<TOwner> where TOwner : IPitchCommonCommandsAccessOwner
-    {
+namespace PitchApplication {
+    public abstract class PitchCommonCommandsAccess<TOwner> : CommandsAccess<TOwner> where TOwner : IPitchCommonCommandsAccessOwner {
         protected PitchCommonCommandsAccess(TOwner owner) : base(owner) { }
 
-        protected override void SetCommandsAccess(bool disableAll)
-        {
+        protected override void SetCommandsAccess(bool disableAll) {
             bool allowCommands = !disableAll && Owner.AllowCommands;
 
             IPitchCommon pitch = Owner;

@@ -1,7 +1,5 @@
-﻿namespace Framework
-{
-    public interface ICommandsAvailability
-    {
+﻿namespace Framework {
+    public interface ICommandsAvailability {
         void InitializeCommandsAvailability();
     }
 }

@@ -1,22 +1,17 @@
 ﻿
-namespace Framework
-{
-    public abstract class CommandsAccess<TOwner> : ICommandsAccess where TOwner : ICommandsAccessOwner
-    {
+namespace Framework {
+    public abstract class CommandsAccess<TOwner> : ICommandsAccess where TOwner : ICommandsAccessOwner {
         protected TOwner Owner;
 
         protected CommandsAccess() { }
 
-        protected CommandsAccess(TOwner owner)
-        {
+        protected CommandsAccess(TOwner owner) {
             Owner = owner;
         }
 
-        public void RefreshCommandsAccess(bool disableAll)
-        {
-            if (disableAll)
-            {
-                  SetCommandsAccess(disableAll);
+        public void RefreshCommandsAccess(bool disableAll) {
+            if (disableAll) {
+                SetCommandsAccess(disableAll);
             }
         }
 

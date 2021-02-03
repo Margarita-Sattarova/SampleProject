@@ -1,12 +1,10 @@
-﻿
-namespace PitchApplication
-{
-    internal class PitchCommandsAccess : PitchCommonCommandsAccess<IPitchCommandsAccessOwner>
-    {
+﻿using Framework;
+
+namespace PitchApplication {
+    internal class PitchCommandsAccess : PitchCommonCommandsAccess<IPitchCommandsAccessOwner> {
         public PitchCommandsAccess(IPitchCommandsAccessOwner owner) : base(owner) { }
 
-        protected override void SetCommandsAccess(bool disableAll)
-        {
+        protected override void SetCommandsAccess(bool disableAll) {
             base.SetCommandsAccess(disableAll);
 
             IPitch applet = Owner;
