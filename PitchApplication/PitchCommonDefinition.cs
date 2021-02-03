@@ -4,12 +4,10 @@ namespace PitchApplication {
     public abstract class PitchCommonDefinition : IPitchCommon {
         protected IPitchCommon PitchCommon;
         public IHost Host { get; internal set; }
-        public bool CanMove { get; set; } = true;
+        ICommonPitchHost CommonPitchHost => (ICommonPitchHost)Host;
         public bool IsRunning => Host.IsRunning;
 
-        public virtual void Initialize() {
-
-        }
+        public virtual void Initialize() {  }
 
         #region Commands
 
@@ -100,6 +98,22 @@ namespace PitchApplication {
 
             }
             RefreshCommandsAccess(false);
+        }
+
+        public virtual bool EnabledMoveNextCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsNextMove;
+        }
+
+        public virtual bool EnabledMovePreviousCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsPreviousMove;
+        }
+
+        public virtual bool EnabledReturnToStartCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsReturnToStart;
+        }
+
+        public virtual bool EnabledSkipNextMoveCommand() {
+            return CommonPitchHost.CanMove && CommonPitchHost.IsSkipNextMove;
         }
 
         protected abstract ICommandsAvailability GetCommandsAvailabilityObject();

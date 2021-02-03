@@ -6,27 +6,20 @@ namespace PitchApplication {
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
+        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
+        bool IPitchCommandsAccessOwner.CanRun => ((ICommonPitchHost)Host).CanRun;
+        bool IPitchCommandsAccessOwner.CanJump => ((ICommonPitchHost)Host).CanJump;
         internal PitchCommonImplementation Implementation { get; set; }
+       
         public Pitch(IHost Host) {
             Implementation = new PitchCommonImplementation(this, Host);
         }
 
-        bool IPitchCommandsAccessOwner.CanRun => throw new System.NotImplementedException();
-
-        bool IPitchCommandsAccessOwner.CanJump => throw new System.NotImplementedException();
-
-        bool IPitchCommonCommandsAccessOwner.AllowCommands => throw new System.NotImplementedException();
-
-        bool IPitchCommonCommandsAccessOwner.EnabledMoveNextCommand => throw new System.NotImplementedException();
-
-        bool IPitchCommonCommandsAccessOwner.EnabledMovePreviousCommand => throw new System.NotImplementedException();
-
-        bool IPitchCommonCommandsAccessOwner.EnabledReturnToStartCommand => throw new System.NotImplementedException();
-
-        bool IPitchCommonCommandsAccessOwner.EnabledSkipNextMoveCommand => throw new System.NotImplementedException();
-
+        public bool EnabledMoveNextCommand() => Implementation.EnabledMoveNextCommand();
+        public bool EnabledMovePreviousCommand() => Implementation.EnabledMovePreviousCommand();
+        public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
+        public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
         bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
-
         bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
 
         #region Commands
