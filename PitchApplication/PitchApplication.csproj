@@ -42,8 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPitch.cs" />
+    <Compile Include="IPitchCommandsAccessOwner.cs" />
     <Compile Include="IPitchCommon.cs" />
+    <Compile Include="IPitchCommonCommandsAccessOwner.cs" />
     <Compile Include="Pitch.cs" />
+    <Compile Include="PitchCommandsAccess.cs" />
+    <Compile Include="PitchCommandsAvailability.cs" />
+    <Compile Include="PitchCommonCommandsAccess.cs" />
+    <Compile Include="PitchCommonCommandsAvailability.cs" />
     <Compile Include="PitchCommonDefinition.cs" />
     <Compile Include="PitchCommonImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
