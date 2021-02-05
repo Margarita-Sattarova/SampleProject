@@ -1,4 +1,5 @@
-﻿using Framework;
+﻿using System;
+using Framework;
 
 namespace PitchApplication {
     interface IPitchCommandsAccessOwner : IPitchCommonCommandsAccessOwner, IPitch {

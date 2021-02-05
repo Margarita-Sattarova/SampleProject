@@ -37,9 +37,9 @@ namespace PitchApplication {
         ICommand IPitch.JumpCommand {
             get {
                 if (vJumpCommand == null) {
-                    vRunCommand = new Command { Name = "Jump" };
+                    vJumpCommand = new Command { Name = "Jump" };
                 }
-                return vRunCommand;
+                return vJumpCommand;
             }
         }
 

@@ -2,10 +2,9 @@
 using PitchApplication;
 
 namespace PitchSkyApplication {
-    public interface IPitchSky : IPitchCommon {
-        bool CanFly { get; set; }
-        ICommand FlyForwardCommand { get; set; }
-        ICommand LandCommand { get; set; }
-        ICommand TakeOffCommand { get; set; }
+    public interface IPitchSky : IPitchCommon, ISkyMovement {
+        ICommand FlyForwardCommand { get; }
+        ICommand LandCommand { get; }
+        ICommand TakeOffCommand { get; }
     }
 }

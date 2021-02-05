@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPitchSky.cs" />
+    <Compile Include="IPitchSkyCommandsAccessOwner.cs" />
+    <Compile Include="IPitchSkyHost.cs" />
     <Compile Include="ISkyMovement.cs" />
     <Compile Include="PitchSky.cs" />
+    <Compile Include="PitchSkyCommandsAccess.cs" />
+    <Compile Include="PitchSkyCommandsAvailability.cs" />
     <Compile Include="PitchSkyImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
