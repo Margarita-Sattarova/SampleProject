@@ -49,7 +49,7 @@ namespace PitchSkyApplication {
         ICommand IPitchSky.TakeOffCommand {
             get {
                 if (vTakeOffCommand == null) {
-                    vTakeOffCommand = new Command { Name = "Land" };
+                    vTakeOffCommand = new Command { Name = "Take Off" };
                 }
                 return vTakeOffCommand;
             }

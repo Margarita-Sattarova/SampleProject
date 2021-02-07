@@ -42,8 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPitchUnderground.cs" />
+    <Compile Include="IPitchUndergroundCommandsAccessOwner.cs" />
+    <Compile Include="IPitchUndergroundHost.cs" />
     <Compile Include="IUndergroundMovement.cs" />
     <Compile Include="PitchUnderground.cs" />
+    <Compile Include="PitchUndergroundCommandsAccess.cs" />
+    <Compile Include="PitchUndergroundCommandsAvailability.cs" />
     <Compile Include="PitchUndergroundImplementation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
