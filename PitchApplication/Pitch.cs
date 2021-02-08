@@ -3,12 +3,15 @@
 namespace PitchApplication {
     public class Pitch : IPitchCommandsAccessOwner {
         private IHost Host;
+        private ICommonMovement CommonMovement;
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
         bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
         bool IPitchCommandsAccessOwner.CanRun => ((ICommonPitchHost)Host).CanRun;
         bool IPitchCommandsAccessOwner.CanJump => ((ICommonPitchHost)Host).CanJump;
+        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
+        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
         internal PitchCommonImplementation Implementation { get; set; }
        
         public Pitch(IHost Host) {
@@ -19,8 +22,18 @@ namespace PitchApplication {
         public bool EnabledMovePreviousCommand() => Implementation.EnabledMovePreviousCommand();
         public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
         public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
-        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
-        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
+        public bool CanMove {
+            get => CommonMovement.CanMove;
+            set => CommonMovement.CanMove = value;
+        }
+        public bool CanRun {
+            get => CommonMovement.CanRun;
+            set => CommonMovement.CanRun = value;
+        }
+        public bool CanJump {
+            get => CommonMovement.CanJump;
+            set => CommonMovement.CanJump = value;
+        }
 
         #region Commands
         ICommand IPitch.RunCommand {

@@ -4,11 +4,14 @@ using PitchApplication;
 namespace PitchUndergroundApplication {
     public class PitchUnderground : IPitchUndergroundCommandsAccessOwner {
         private IHost Host;
+        private IUndergroundMovement UndergroundMovement;
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
         bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
         bool IPitchUndergroundCommandsAccessOwner.CanCrawl => ((IPitchUndergroundHost)Host).CanCrawl;
+        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
+        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
         internal PitchUndergroundImplementation Implementation { get; set; }
 
         public PitchUnderground(IHost Host) {
@@ -19,8 +22,23 @@ namespace PitchUndergroundApplication {
         public bool EnabledMovePreviousCommand() => Implementation.EnabledMovePreviousCommand();
         public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
         public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
-        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
-        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
+
+        public bool CanMove {
+            get => UndergroundMovement.CanMove;
+            set => UndergroundMovement.CanMove = value;
+        }
+        public bool CanRun {
+            get => UndergroundMovement.CanRun;
+            set => UndergroundMovement.CanRun = value;
+        }
+        public bool CanJump {
+            get => UndergroundMovement.CanJump;
+            set => UndergroundMovement.CanJump = value;
+        }
+        public bool CanCrawl {
+            get => UndergroundMovement.CanCrawl;
+            set => UndergroundMovement.CanCrawl = value;
+        }
 
         #region Commands
         ICommand IPitchUnderground.FindWayCommand {

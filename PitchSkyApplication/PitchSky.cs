@@ -4,30 +4,15 @@ using PitchApplication;
 namespace PitchSkyApplication {
     public class PitchSky : IPitchSkyCommandsAccessOwner {
         private IHost Host;
+        private ISkyMovement SkyMovement;
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
         bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
         bool IPitchSkyCommandsAccessOwner.CanFly => ((IPitchSkyHost)Host).CanFly;
-        public bool CanLand {
-            get {
-                return SkyMovement.CanLand;
-            }
-
-            set {
-                CanLand = value;
-            }
-        }
-        public bool CanFly {
-            get {
-                return SkyMovement.CanFly;
-            }
-
-            set {
-                CanFly = value;
-            }
-        }
         bool IPitchSkyCommandsAccessOwner.CanLand => ((IPitchSkyHost)Host).CanLand;
+        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
+        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
         internal PitchSkyImplementation Implementation { get; set; }
 
         public PitchSky(IHost Host) {
@@ -39,8 +24,14 @@ namespace PitchSkyApplication {
         public bool EnabledMovePreviousCommand() => Implementation.EnabledMovePreviousCommand();
         public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
         public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
-        bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
-        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
+        public bool CanLand {
+            get => SkyMovement.CanLand;
+            set => SkyMovement.CanLand = value;
+        }
+        public bool CanFly {
+            get => SkyMovement.CanFly;
+            set => SkyMovement.CanFly = value;
+        }
 
         #region Commands
         ICommand IPitchSky.FlyForwardCommand {
@@ -108,35 +99,16 @@ namespace PitchSkyApplication {
         }
 
         public bool CanMove {
-            get
-            {
-                return SkyMovement.CanMove;
-            }
-
-            set
-            {
-                CanMove = value;
-            }
+            get => SkyMovement.CanMove;
+            set => SkyMovement.CanMove = value;
         }
         public bool CanRun {
-            get {
-                return SkyMovement.CanRun;
-            }
-
-            set {
-                CanRun = value;
-            }
+            get => SkyMovement.CanRun;
+            set => SkyMovement.CanRun = value;
         }
         public bool CanJump {
-            get {
-                return SkyMovement.CanJump;
-            }
-
-            set {
-                CanJump = value;
-            }
+            get => SkyMovement.CanJump;
+            set => SkyMovement.CanJump = value;
         }
-
-        private ISkyMovement SkyMovement;
     }
 }
