@@ -5,7 +5,10 @@ namespace PitchSkyApplication {
     public class PitchSkyImplementation : PitchCommonDefinition {
         private IPitchSky PitchSky => (IPitchSky)PitchCommon;
 
-        public PitchSkyImplementation(IPitchSky pitch, IHost host) : base(pitch, host) { }
+
+        public PitchSkyImplementation(IPitchSky pitch, IHost host) : base(pitch, host)
+        {
+        }
 
         public override void Initialize() {
             base.Initialize();
@@ -18,5 +21,7 @@ namespace PitchSkyApplication {
         protected override ICommandsAvailability GetCommandsAvailabilityObject() {
             return new PitchSkyCommandsAvailability(PitchSky);
         }
+
+
     }
 }

@@ -9,11 +9,30 @@ namespace PitchSkyApplication {
         private bool IsInFocus => Host.IsInFocus;
         bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
         bool IPitchSkyCommandsAccessOwner.CanFly => ((IPitchSkyHost)Host).CanFly;
+        public bool CanLand {
+            get {
+                return SkyMovement.CanLand;
+            }
+
+            set {
+                CanLand = value;
+            }
+        }
+        public bool CanFly {
+            get {
+                return SkyMovement.CanFly;
+            }
+
+            set {
+                CanFly = value;
+            }
+        }
         bool IPitchSkyCommandsAccessOwner.CanLand => ((IPitchSkyHost)Host).CanLand;
         internal PitchSkyImplementation Implementation { get; set; }
 
         public PitchSky(IHost Host) {
             Implementation = new PitchSkyImplementation(this, Host);
+            SkyMovement = (ISkyMovement)Host;
         }
 
         public bool EnabledMoveNextCommand() => Implementation.EnabledMoveNextCommand();
@@ -87,5 +106,37 @@ namespace PitchSkyApplication {
 
             Implementation.SkipNextMove();
         }
+
+        public bool CanMove {
+            get
+            {
+                return SkyMovement.CanMove;
+            }
+
+            set
+            {
+                CanMove = value;
+            }
+        }
+        public bool CanRun {
+            get {
+                return SkyMovement.CanRun;
+            }
+
+            set {
+                CanRun = value;
+            }
+        }
+        public bool CanJump {
+            get {
+                return SkyMovement.CanJump;
+            }
+
+            set {
+                CanJump = value;
+            }
+        }
+
+        private ISkyMovement SkyMovement;
     }
 }
