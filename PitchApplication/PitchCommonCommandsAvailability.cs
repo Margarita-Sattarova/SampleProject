@@ -1,5 +1,4 @@
 ﻿using Framework;
-using System;
 
 namespace PitchApplication {
     public abstract class PitchCommonCommandsAvailability<TPitch> : ICommandsAvailability

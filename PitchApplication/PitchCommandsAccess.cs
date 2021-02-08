@@ -1,6 +1,4 @@
-﻿using Framework;
-
-namespace PitchApplication {
+﻿namespace PitchApplication {
     internal class PitchCommandsAccess : PitchCommonCommandsAccess<IPitchCommandsAccessOwner> {
         public PitchCommandsAccess(IPitchCommandsAccessOwner owner) : base(owner) { }
 

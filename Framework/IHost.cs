@@ -1,5 +1,4 @@
-﻿using System;
-namespace Framework {
+﻿namespace Framework {
     public interface IHost {
         bool IsRunning { get; set; }
 
