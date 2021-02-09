@@ -97,3 +97,4 @@ E:\GLSampleApplicationUpdated\SampleProject\PitchApplicationTest\bin\Debug\netco
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplicationTest\obj\Debug\netcoreapp3.1\PitchApplicationTest.csproj.CoreCompileInputs.cache
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplicationTest\obj\Debug\netcoreapp3.1\PitchApplicationTest.dll
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplicationTest\obj\Debug\netcoreapp3.1\PitchApplicationTest.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplicationTest\obj\Debug\netcoreapp3.1\PitchApplicationTest.csprojAssemblyReference.cache
