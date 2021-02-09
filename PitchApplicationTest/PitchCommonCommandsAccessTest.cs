@@ -24,10 +24,11 @@ namespace PitchApplicationTest {
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             PitchCommandsAccessOwnerMock = ApplicationMock.As<IPitchCommandsAccessOwner>();
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
+            CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
             Pitch = ApplicationMock.Object;
             CommandsAccess = new PitchCommandsAccess((IPitchCommandsAccessOwner)CommandsAccessOwnerMock.Object);
 
-            CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
+            
         }
 
         [TestMethod]
