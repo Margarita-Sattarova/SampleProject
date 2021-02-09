@@ -1,9 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace PitchSkyApplicationTest {
+namespace PitchApplicationTest {
     [TestClass]
-    public class CommandsAccessTest {
+    public class PitchCommonCommandsAvailabilityTest {
         [TestInitialize]
         public void TestInitialize() { }
 
