@@ -6150,23 +6150,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Margarita\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\MASA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+      "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
       "projectName": "PitchApplicationTest",
-      "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
-      "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
-      "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\obj\\",
+      "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+      "packagesPath": "C:\\Users\\MASA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6178,9 +6174,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
-              "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj"
+            "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+              "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj"
             }
           }
         }
@@ -6193,6 +6190,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -6230,7 +6228,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

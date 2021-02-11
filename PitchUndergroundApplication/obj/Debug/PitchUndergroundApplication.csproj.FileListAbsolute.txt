@@ -20,3 +20,14 @@ E:\GLSampleApplicationUpdated\SampleProject\PitchUndergroundApplication\bin\Debu
 E:\GLSampleApplicationUpdated\SampleProject\PitchUndergroundApplication\bin\Debug\Framework.pdb
 E:\GLSampleApplicationUpdated\SampleProject\PitchUndergroundApplication\bin\Debug\PitchApplication.pdb
 E:\GLSampleApplicationUpdated\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\PitchUndergroundApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\PitchUndergroundApplication.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\Framework.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\PitchApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\Framework.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\bin\Debug\PitchApplication.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.csprojAssemblyReference.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.csproj.CoreCompileInputs.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchUndergroundApplication\obj\Debug\PitchUndergroundApplication.pdb

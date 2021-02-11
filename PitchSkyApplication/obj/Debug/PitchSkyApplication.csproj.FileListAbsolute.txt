@@ -20,3 +20,14 @@ E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchA
 E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\Framework.pdb
 E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchApplication.pdb
 E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\PitchSkyApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\PitchSkyApplication.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\Framework.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\PitchApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\Framework.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\bin\Debug\PitchApplication.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csprojAssemblyReference.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CoreCompileInputs.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.pdb

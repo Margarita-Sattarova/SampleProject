@@ -1,34 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {}
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {}
   },
   "projects": {
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj",
+        "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+        "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+        "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
         "projectName": "PitchApplicationTest",
-        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
-        "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
-        "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\obj\\",
+        "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+        "packagesPath": "C:\\Users\\MASA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +36,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj"
               }
             }
           }
@@ -55,6 +52,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -92,21 +90,20 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj",
+        "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj",
         "projectName": "PitchApplication",
-        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj",
+        "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj"
               }
             }
           }
@@ -116,20 +113,17 @@
         "net472": {}
       }
     },
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+        "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
         "projectName": "PitchUndergroundApplicationTest",
-        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
-        "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
-        "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\obj\\",
+        "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+        "packagesPath": "C:\\Users\\MASA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -141,12 +135,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj"
               },
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj"
               }
             }
           }
@@ -159,6 +154,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "MSTest.TestAdapter": {
               "target": "Package",
@@ -196,24 +192,23 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
       "restore": {
-        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
+        "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
         "projectName": "PitchUndergroundApplication",
-        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
+        "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\Framework\\Framework.csproj"
               },
-              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
-                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj"
+              "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+                "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplication\\PitchApplication.csproj"
               }
             }
           }

@@ -16,3 +16,12 @@ E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\PitchAppl
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\Framework.dll
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\Framework.pdb
 E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\bin\Debug\PitchApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\bin\Debug\PitchApplication.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\bin\Debug\Framework.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\bin\Debug\Framework.pdb
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\obj\Debug\PitchApplication.csprojAssemblyReference.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\obj\Debug\PitchApplication.csproj.CoreCompileInputs.cache
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\obj\Debug\PitchApplication.csproj.CopyComplete
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\obj\Debug\PitchApplication.dll
+C:\Users\MASA\source\repos\SampleProject\SampleProject\PitchApplication\obj\Debug\PitchApplication.pdb

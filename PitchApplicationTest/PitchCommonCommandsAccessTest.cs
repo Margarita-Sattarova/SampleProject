@@ -15,7 +15,7 @@ namespace PitchApplicationTest {
         private Mock<ICommandsAccessOwner> CommandsAccessOwnerMock;
 
         private Mock<ICommonPitchHost> CommonPitchHostMock;
-        private CommonPitchHost CommonPitchHost;
+        private ICommonPitchHost CommonPitchHost;
 
         private Mock<IPitchHost> PitchHostMock;
 
