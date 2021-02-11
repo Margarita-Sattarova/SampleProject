@@ -1,16 +1,22 @@
 ﻿using Framework;
+using PitchApplication;
 
 namespace PitchUndergroundApplication {
-    public class PitchUndergroundImplementation : IPitchUnderground {
-        public bool IsOnline { get; set; }
-        public bool CanMove { get; set; }
-        public bool CanCrawl { get; set; }
-        public ICommand MoveNextCommand { get; set; }
-        public ICommand MovePreviousCommand { get; set; }
-        public ICommand ReturnToStartCommand { get; set; }
-        public ICommand SkipNextMoveCommand { get; set; }
-        public ICommand SwitchToLightCommand { get; set; }
-        public ICommand SwitchToDarkCommand { get; set; }
-        public ICommand FindWayCommand { get; set; }
+    public class PitchUndergroundImplementation : PitchCommonDefinition {
+        private IPitchUnderground PitchUnderground => (IPitchUnderground)PitchCommon;
+
+        public PitchUndergroundImplementation(IPitchUnderground pitch, IHost host) : base(pitch, host) { }
+
+        public override void Initialize() {
+            base.Initialize();
+        }
+
+        protected override ICommandsAccess GetCommandsAccessObject() {
+            return new PitchUndergroundCommandsAccess((IPitchUndergroundCommandsAccessOwner)PitchUnderground);
+        }
+
+        protected override ICommandsAvailability GetCommandsAvailabilityObject() {
+            return new PitchUndergroundCommandsAvailability(PitchUnderground);
+        }
     }
 }

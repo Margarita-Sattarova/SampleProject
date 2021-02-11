@@ -4,3 +4,8 @@ E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.csprojAss
 E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
 E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.dll
 E:\GLSampleApplication\SampleApplication\Framework\obj\Debug\Framework.pdb
+E:\GLSampleApplicationUpdated\SampleProject\Framework\bin\Debug\Framework.dll
+E:\GLSampleApplicationUpdated\SampleProject\Framework\bin\Debug\Framework.pdb
+E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
+E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.dll
+E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.pdb

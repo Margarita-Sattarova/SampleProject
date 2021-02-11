@@ -1,10 +1,9 @@
-﻿using System;
-namespace Framework {
+﻿namespace Framework {
     public interface IHost {
-        bool IsRunning { get; set; }
+        bool IsRunning { get; }
 
-        bool IsInFocus { get; set; }
+        bool IsInFocus { get; }
 
-        bool IsOnLine { get; set; }
+        bool IsOnLine { get; }
     }
 }

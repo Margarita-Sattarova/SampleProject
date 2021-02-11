@@ -1,9 +1,8 @@
 ﻿using Framework;
-using System;
 
 namespace PitchApplication {
     public abstract class PitchCommonCommandsAvailability<TPitch> : ICommandsAvailability
-        where TPitch : IPitchCommon {
+        where TPitch : IPitchCommon, ICommonMovement {
         protected readonly TPitch Pitch;
 
         protected PitchCommonCommandsAvailability(TPitch pitch) {

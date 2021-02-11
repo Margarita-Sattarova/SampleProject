@@ -1,0 +1,227 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {}
+  },
+  "projects": {
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj",
+        "projectName": "Framework",
+        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+        "projectName": "PitchApplicationTest",
+        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj",
+        "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
+        "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj",
+        "projectName": "PitchApplication",
+        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+        "projectName": "PitchUndergroundApplicationTest",
+        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+        "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
+        "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj"
+              },
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.16.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
+        "projectName": "PitchUndergroundApplication",
+        "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\Framework\\Framework.csproj"
+              },
+              "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj": {
+                "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplication\\PitchApplication.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}

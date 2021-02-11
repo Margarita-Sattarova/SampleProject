@@ -9,3 +9,14 @@ E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchAppl
 E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\Framework.pdb
 E:\GLSampleApplication\SampleApplication\PitchSkyApplication\bin\Debug\PitchApplication.pdb
 E:\GLSampleApplication\SampleApplication\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CopyComplete
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csprojAssemblyReference.cache
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CoreCompileInputs.cache
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchSkyApplication.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchSkyApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\Framework.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchApplication.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\Framework.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\bin\Debug\PitchApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchSkyApplication\obj\Debug\PitchSkyApplication.csproj.CopyComplete

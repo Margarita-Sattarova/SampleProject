@@ -7,3 +7,12 @@ E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplica
 E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.csproj.CopyComplete
 E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.dll
 E:\GLSampleApplication\SampleApplication\PitchApplication\obj\Debug\PitchApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.csprojAssemblyReference.cache
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.csproj.CoreCompileInputs.cache
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\PitchApplication.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\PitchApplication.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\Framework.dll
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\bin\Debug\Framework.pdb
+E:\GLSampleApplicationUpdated\SampleProject\PitchApplication\obj\Debug\PitchApplication.csproj.CopyComplete
