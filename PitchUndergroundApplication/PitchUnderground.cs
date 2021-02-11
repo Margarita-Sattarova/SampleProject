@@ -28,50 +28,22 @@ namespace PitchUndergroundApplication {
             get => UndergroundMovement.CanMove;
             set => UndergroundMovement.CanMove = value;
         }
-        //public bool CanRun {
-        //    get => UndergroundMovement.CanRun;
-        //    set => UndergroundMovement.CanRun = value;
-        //}
-        //public bool CanJump {
-        //    get => UndergroundMovement.CanJump;
-        //    set => UndergroundMovement.CanJump = value;
-        //}
+
         public bool CanCrawl {
             get => UndergroundMovement.CanCrawl;
             set => UndergroundMovement.CanCrawl = value;
         }
 
         #region Commands
-        ICommand IPitchUnderground.FindWayCommand {
-            get {
-                if (vFindWayCommand == null) {
-                    vFindWayCommand = new Command { Name = "Find Way" };
-                }
-                return vFindWayCommand;
-            }
-        }
+        ICommand IPitchUnderground.FindWayCommand => vFindWayCommand ?? (vFindWayCommand = new Command {Name = "Find Way"});
 
         private ICommand vFindWayCommand;
 
-        ICommand IPitchUnderground.SwitchToLightCommand {
-            get {
-                if (vSwitchToLightCommand == null) {
-                    vSwitchToLightCommand = new Command { Name = "Switch To Light" };
-                }
-                return vSwitchToLightCommand;
-            }
-        }
+        ICommand IPitchUnderground.SwitchToLightCommand => vSwitchToLightCommand ?? (vSwitchToLightCommand = new Command {Name = "Switch To Light"});
 
         private ICommand vSwitchToLightCommand;
 
-        ICommand IPitchUnderground.SwitchToDarkCommand {
-            get {
-                if (vSwitchToDarkCommand == null) {
-                    vSwitchToDarkCommand = new Command { Name = "Switch To Dark" };
-                }
-                return vSwitchToDarkCommand;
-            }
-        }
+        ICommand IPitchUnderground.SwitchToDarkCommand => vSwitchToDarkCommand ?? (vSwitchToDarkCommand = new Command {Name = "Switch To Dark"});
 
         private ICommand vSwitchToDarkCommand;
 

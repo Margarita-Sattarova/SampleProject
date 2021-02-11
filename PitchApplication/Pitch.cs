@@ -42,25 +42,11 @@ namespace PitchApplication {
         }
 
         #region Commands
-        ICommand IPitch.RunCommand {
-            get {
-                if (vRunCommand == null) {
-                    vRunCommand = new Command { Name = "Run" };
-                }
-                return vRunCommand;
-            }
-        }
+        ICommand IPitch.RunCommand => vRunCommand ?? (vRunCommand = new Command {Name = "Run"});
 
         private ICommand vRunCommand;
 
-        ICommand IPitch.JumpCommand {
-            get {
-                if (vJumpCommand == null) {
-                    vJumpCommand = new Command { Name = "Jump" };
-                }
-                return vJumpCommand;
-            }
-        }
+        ICommand IPitch.JumpCommand => vJumpCommand ?? (vJumpCommand = new Command {Name = "Jump"});
 
         private ICommand vJumpCommand;
 

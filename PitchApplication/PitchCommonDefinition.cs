@@ -3,7 +3,7 @@
 namespace PitchApplication {
     public abstract class PitchCommonDefinition : IPitchCommon {
         protected IPitchCommon PitchCommon;
-        public IHost Host { get; internal set; }
+        public IHost Host { get; set; }
         ICommonPitchHost CommonPitchHost => (ICommonPitchHost)Host;
         public bool IsRunning => Host.IsRunning;
 

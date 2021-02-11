@@ -35,36 +35,15 @@ namespace PitchSkyApplication {
         }
 
         #region Commands
-        ICommand IPitchSky.FlyForwardCommand {
-            get {
-                if (vFlyForwardCommand == null) {
-                    vFlyForwardCommand = new Command { Name = "Fly Forward" };
-                }
-                return vFlyForwardCommand;
-            }
-        }
+        ICommand IPitchSky.FlyForwardCommand => vFlyForwardCommand ?? (vFlyForwardCommand = new Command {Name = "Fly Forward"});
 
         private ICommand vFlyForwardCommand;
 
-        ICommand IPitchSky.LandCommand {
-            get {
-                if (vLandCommand == null) {
-                    vLandCommand = new Command { Name = "Land" };
-                }
-                return vLandCommand;
-            }
-        }
+        ICommand IPitchSky.LandCommand => vLandCommand ?? (vLandCommand = new Command {Name = "Land"});
 
         private ICommand vLandCommand;
 
-        ICommand IPitchSky.TakeOffCommand {
-            get {
-                if (vTakeOffCommand == null) {
-                    vTakeOffCommand = new Command { Name = "Take Off" };
-                }
-                return vTakeOffCommand;
-            }
-        }
+        ICommand IPitchSky.TakeOffCommand => vTakeOffCommand ?? (vTakeOffCommand = new Command {Name = "Take Off"});
 
         private ICommand vTakeOffCommand;
 
@@ -103,13 +82,5 @@ namespace PitchSkyApplication {
             get => SkyMovement.CanMove;
             set => SkyMovement.CanMove = value;
         }
-        //public bool CanRun {
-        //    get => SkyMovement.CanRun;
-        //    set => SkyMovement.CanRun = value;
-        //}
-        //public bool CanJump {
-        //    get => SkyMovement.CanJump;
-        //    set => SkyMovement.CanJump = value;
-        //}
     }
 }
