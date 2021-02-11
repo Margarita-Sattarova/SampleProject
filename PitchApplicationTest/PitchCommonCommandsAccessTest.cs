@@ -17,6 +17,9 @@ namespace PitchApplicationTest {
         private Mock<ICommonPitchHost> CommonPitchHostMock;
         private CommonPitchHost CommonPitchHost;
 
+        private Mock<IPitchHost> PitchHostMock;
+
+
         [TestInitialize]
         public void TestInitialize()
         {
@@ -25,6 +28,9 @@ namespace PitchApplicationTest {
             PitchCommandsAccessOwnerMock = ApplicationMock.As<IPitchCommandsAccessOwner>();
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
+            PitchHostMock = new Mock<IPitchHost>();
+            PitchHostMock.Setup(o => o.CanMove).Returns(true);
+            ApplicationMock.Setup(o => o.Host).Returns(PitchHostMock.Object);
             Pitch = ApplicationMock.Object;
             CommandsAccess = new PitchCommandsAccess((IPitchCommandsAccessOwner)CommandsAccessOwnerMock.Object);
 

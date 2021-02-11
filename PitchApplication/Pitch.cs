@@ -1,20 +1,26 @@
 ﻿using Framework;
 
 namespace PitchApplication {
-    public class Pitch : IPitchCommandsAccessOwner {
-        private IHost Host;
-        private ICommonMovement CommonMovement;
-        private bool IsOnline => Host.IsOnLine;
+    public class Pitch : IPitchCommandsAccessOwner, IPitchHost
+    {
+        public IHost Host { get; set; } = new PitchHost();
+
+        private IPitchMovement PitchMovement;
         private bool IsRunning => Host.IsRunning;
-        private bool IsInFocus => Host.IsInFocus;
-        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
-        bool IPitchCommandsAccessOwner.CanRun => ((ICommonPitchHost)Host).CanRun;
-        bool IPitchCommandsAccessOwner.CanJump => ((ICommonPitchHost)Host).CanJump;
+        bool IHost.IsRunning => Host.IsRunning;
+        bool IHost.IsInFocus => IsInFocus;
+        public bool IsOnLine => Host.IsOnLine;
+
+        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnLine;
+        bool IPitchCommandsAccessOwner.CanRun => ((IPitchHost)Host).CanRun;
+        bool IPitchCommandsAccessOwner.CanJump => ((IPitchHost)Host).CanJump;
         bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
-        bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;
+        bool ICommandsAccessOwner.IsInFocus => IsInFocus;
+
+        private bool IsInFocus => Host.IsInFocus;
         internal PitchCommonImplementation Implementation { get; set; }
        
-        public Pitch(IHost Host) {
+        public Pitch() {
             Implementation = new PitchCommonImplementation(this, Host);
         }
 
@@ -23,16 +29,16 @@ namespace PitchApplication {
         public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
         public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
         public bool CanMove {
-            get => CommonMovement.CanMove;
-            set => CommonMovement.CanMove = value;
+            get => PitchMovement.CanMove;
+            set => PitchMovement.CanMove = value;
         }
         public bool CanRun {
-            get => CommonMovement.CanRun;
-            set => CommonMovement.CanRun = value;
+            get => PitchMovement.CanRun;
+            set => PitchMovement.CanRun = value;
         }
         public bool CanJump {
-            get => CommonMovement.CanJump;
-            set => CommonMovement.CanJump = value;
+            get => PitchMovement.CanJump;
+            set => PitchMovement.CanJump = value;
         }
 
         #region Commands
@@ -88,5 +94,10 @@ namespace PitchApplication {
 
             Implementation.SkipNextMove();
         }
+
+        public bool IsNextMove { get; set; }
+        public bool IsPreviousMove { get; set; }
+        public bool IsReturnToStart { get; set; }
+        public bool IsSkipNextMove { get; set; }
     }
 }

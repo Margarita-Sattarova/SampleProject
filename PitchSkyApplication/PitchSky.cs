@@ -3,7 +3,8 @@ using PitchApplication;
 
 namespace PitchSkyApplication {
     public class PitchSky : IPitchSkyCommandsAccessOwner {
-        private IHost Host;
+        public IHost Host { get; set; } = new PitchHost();
+
         private ISkyMovement SkyMovement;
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
@@ -102,13 +103,13 @@ namespace PitchSkyApplication {
             get => SkyMovement.CanMove;
             set => SkyMovement.CanMove = value;
         }
-        public bool CanRun {
-            get => SkyMovement.CanRun;
-            set => SkyMovement.CanRun = value;
-        }
-        public bool CanJump {
-            get => SkyMovement.CanJump;
-            set => SkyMovement.CanJump = value;
-        }
+        //public bool CanRun {
+        //    get => SkyMovement.CanRun;
+        //    set => SkyMovement.CanRun = value;
+        //}
+        //public bool CanJump {
+        //    get => SkyMovement.CanJump;
+        //    set => SkyMovement.CanJump = value;
+        //}
     }
 }

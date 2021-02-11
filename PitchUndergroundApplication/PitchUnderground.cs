@@ -3,7 +3,8 @@ using PitchApplication;
 
 namespace PitchUndergroundApplication {
     public class PitchUnderground : IPitchUndergroundCommandsAccessOwner {
-        private IHost Host;
+        public IHost Host { get; set; } = new PitchHost();
+
         private IUndergroundMovement UndergroundMovement;
         private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
@@ -27,14 +28,14 @@ namespace PitchUndergroundApplication {
             get => UndergroundMovement.CanMove;
             set => UndergroundMovement.CanMove = value;
         }
-        public bool CanRun {
-            get => UndergroundMovement.CanRun;
-            set => UndergroundMovement.CanRun = value;
-        }
-        public bool CanJump {
-            get => UndergroundMovement.CanJump;
-            set => UndergroundMovement.CanJump = value;
-        }
+        //public bool CanRun {
+        //    get => UndergroundMovement.CanRun;
+        //    set => UndergroundMovement.CanRun = value;
+        //}
+        //public bool CanJump {
+        //    get => UndergroundMovement.CanJump;
+        //    set => UndergroundMovement.CanJump = value;
+        //}
         public bool CanCrawl {
             get => UndergroundMovement.CanCrawl;
             set => UndergroundMovement.CanCrawl = value;
