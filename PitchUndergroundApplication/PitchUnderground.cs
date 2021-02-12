@@ -6,10 +6,11 @@ namespace PitchUndergroundApplication {
         public IHost Host { get; set; } = new PitchHost();
 
         private IUndergroundMovement UndergroundMovement;
-        private bool IsOnline => Host.IsOnLine;
+        //private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
-        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
+        public bool IsOnLine => Host.IsOnLine;
+        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnLine;
         bool IPitchUndergroundCommandsAccessOwner.CanCrawl => ((IPitchUndergroundHost)Host).CanCrawl;
         bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
         bool ICommandsAccessOwner.IsInFocus => Host.IsInFocus;

@@ -6,10 +6,11 @@ namespace PitchSkyApplication {
         public IHost Host { get; set; } = new PitchHost();
 
         private ISkyMovement SkyMovement;
-        private bool IsOnline => Host.IsOnLine;
+        //private bool IsOnline => Host.IsOnLine;
         private bool IsRunning => Host.IsRunning;
         private bool IsInFocus => Host.IsInFocus;
-        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnline;
+        public bool IsOnLine => Host.IsOnLine;
+        bool IPitchCommonCommandsAccessOwner.AllowCommands => IsRunning && IsInFocus && IsOnLine;
         bool IPitchSkyCommandsAccessOwner.CanFly => ((IPitchSkyHost)Host).CanFly;
         bool IPitchSkyCommandsAccessOwner.CanLand => ((IPitchSkyHost)Host).CanLand;
         bool ICommandsAccessOwner.IsRunning => Host.IsRunning;
