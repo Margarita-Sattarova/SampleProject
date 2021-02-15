@@ -29,7 +29,10 @@ namespace PitchApplicationTest {
             PitchCommandsAccessOwnerMock.Setup(o => o.AllowCommands).Returns(true);
             PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMoveNextCommand()).Returns(true);
             PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMovePreviousCommand()).Returns(true);
-            //PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMoveNextCommand()).Returns(true);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledReturnToStartCommand()).Returns(true);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledSkipNextMoveCommand()).Returns(true);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledRunCommand()).Returns(true);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledJumpCommand()).Returns(true);
 
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
