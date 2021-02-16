@@ -28,6 +28,9 @@ namespace PitchApplication {
         public bool EnabledMovePreviousCommand() => Implementation.EnabledMovePreviousCommand();
         public bool EnabledReturnToStartCommand() => Implementation.EnabledReturnToStartCommand();
         public bool EnabledSkipNextMoveCommand() => Implementation.EnabledSkipNextMoveCommand();
+
+        public bool EnabledRunCommand() => this.CanRun;
+        public bool EnabledJumpCommand() => this.CanJump;
         public bool CanMove {
             get => PitchMovement.CanMove;
             set => PitchMovement.CanMove = value;

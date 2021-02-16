@@ -10,9 +10,7 @@ namespace Framework {
         }
 
         public void RefreshCommandsAccess(bool disableAll) {
-            if (disableAll) {
                 SetCommandsAccess(disableAll);
-            }
         }
 
         public virtual void InitialCommandsDisabling() { }

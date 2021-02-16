@@ -9,9 +9,4 @@ E:\GLSampleApplicationUpdated\SampleProject\Framework\bin\Debug\Framework.pdb
 E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
 E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.dll
 E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.pdb
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\bin\Debug\Framework.dll
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\bin\Debug\Framework.pdb
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\obj\Debug\Framework.csprojAssemblyReference.cache
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\obj\Debug\Framework.csproj.CoreCompileInputs.cache
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\obj\Debug\Framework.dll
-C:\Users\MASA\source\repos\SampleProject\SampleProject\Framework\obj\Debug\Framework.pdb
+E:\GLSampleApplicationUpdated\SampleProject\Framework\obj\Debug\Framework.csprojAssemblyReference.cache
