@@ -26,22 +26,17 @@ namespace PitchApplicationTest {
             SetupApplicationMock();
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             PitchCommandsAccessOwnerMock = ApplicationMock.As<IPitchCommandsAccessOwner>();
-            PitchCommandsAccessOwnerMock.Setup(o => o.AllowCommands).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMoveNextCommand()).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMovePreviousCommand()).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledReturnToStartCommand()).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledSkipNextMoveCommand()).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledRunCommand()).Returns(true);
-            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledJumpCommand()).Returns(true);
+            AllowCommands(true);
+            PitchCommandsAccessOwnerMockSetupCommandsEnabledMethods(true);
 
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
             PitchHostMock = new Mock<IPitchHost>();
             PitchHostMock.Setup(o => o.CanMove).Returns(true);
-            var commonPitchHost = PitchHostMock.As<ICommonPitchHost>();
-            commonPitchHost.Setup(o => o.IsInFocus).Returns(true);
-            commonPitchHost.Setup(o => o.IsOnLine).Returns(true);
-            commonPitchHost.Setup(o => o.IsRunning).Returns(true);
+            //var commonPitchHost = PitchHostMock.As<ICommonPitchHost>();
+            //commonPitchHost.Setup(o => o.IsInFocus).Returns(true);
+            //commonPitchHost.Setup(o => o.IsOnLine).Returns(true);
+            //commonPitchHost.Setup(o => o.IsRunning).Returns(true);
 
             ApplicationMock.Setup(o => o.Host).Returns(PitchHostMock.Object);
             Pitch = ApplicationMock.Object;
@@ -126,25 +121,39 @@ namespace PitchApplicationTest {
         {
             var applicationMock = new PitchMock<IPitch>();
             ApplicationMock = applicationMock.Create(Pitch);
-            SetupCommonPitchHostMock();
+            //ApplicationMock.Setup(o => o.CanMove).Returns(true);
+            ApplicationMock.Setup(o => o.CanRun).Returns(true);
+            ApplicationMock.Setup(o => o.CanJump).Returns(true);
+            SetupCommonPitchHostMock(true, true, true);
         }
 
-        //private method of type void "AllowCommands()"
-        //other private methods for props and so on
-        //Add 2 or more test methods for every command
-
-        private void SetupCommonPitchHostMock() {
+        private void SetupCommonPitchHostMock(bool isInFocus, bool isOnline, bool isRunning) {
             var commonPitchHostMock = new CommonPitchHostMock<ICommonPitchHost>();
             CommonPitchHostMock = commonPitchHostMock.Create(CommonPitchHost);
-            commonPitchHostMock.IsOnLine = true;
-            commonPitchHostMock.IsRunning = true;
-            commonPitchHostMock.IsInFocus = true;
+            CommonPitchHostMock.Setup(o => o.IsInFocus).Returns(isInFocus);
+            CommonPitchHostMock.Setup(o => o.IsOnLine).Returns(isOnline);
+            CommonPitchHostMock.Setup(o => o.IsRunning).Returns(isRunning);
         }
 
         private void SetupApplicationCommandsAccessOwnerMock(bool isInFocus, bool isRunning, bool isOnline) {
             CommandsAccessOwnerMock.Setup(o => o.IsInFocus).Returns(isInFocus);
             CommandsAccessOwnerMock.Setup(o => o.IsRunning).Returns(isRunning);
             CommandsAccessOwnerMock.Setup(o => o.IsOnLine).Returns(isOnline);
+
+            //CommandsAccessOwnerMock.Setup(o => o.).Returns(isOnline);
+        }
+
+        private void AllowCommands(bool commandsAllowed) {
+            PitchCommandsAccessOwnerMock.Setup(o => o.AllowCommands).Returns(commandsAllowed);
+        }
+
+        private void PitchCommandsAccessOwnerMockSetupCommandsEnabledMethods(bool commandsEnabled) {
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMoveNextCommand()).Returns(commandsEnabled);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledMovePreviousCommand()).Returns(commandsEnabled);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledReturnToStartCommand()).Returns(commandsEnabled);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledSkipNextMoveCommand()).Returns(commandsEnabled);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledRunCommand()).Returns(commandsEnabled);
+            PitchCommandsAccessOwnerMock.Setup(o => o.EnabledJumpCommand()).Returns(commandsEnabled);
         }
 
         private void CommandDisabledTest(ICommand command, bool disabled) {
