@@ -24,8 +24,13 @@ namespace PitchApplicationTest {
         public void TestInitialize()
         {
             SetupApplicationMock();
+            var pitchMovement = ApplicationMock.As<IPitchMovement>();
+            pitchMovement.Setup(o => o.CanRun).Returns(true);
+            pitchMovement.Setup(o => o.CanJump).Returns(true);
             CommandsAccessOwnerMock = ApplicationMock.As<ICommandsAccessOwner>();
             PitchCommandsAccessOwnerMock = ApplicationMock.As<IPitchCommandsAccessOwner>();
+            PitchCommandsAccessOwnerMock.Setup(o => o.CanJump).Returns(true);
+            PitchCommandsAccessOwnerMock.Setup(o => o.CanRun).Returns(true);
             AllowCommands(true);
             PitchCommandsAccessOwnerMockSetupCommandsEnabledMethods(true);
 
@@ -33,16 +38,10 @@ namespace PitchApplicationTest {
             CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
             PitchHostMock = new Mock<IPitchHost>();
             PitchHostMock.Setup(o => o.CanMove).Returns(true);
-            //var commonPitchHost = PitchHostMock.As<ICommonPitchHost>();
-            //commonPitchHost.Setup(o => o.IsInFocus).Returns(true);
-            //commonPitchHost.Setup(o => o.IsOnLine).Returns(true);
-            //commonPitchHost.Setup(o => o.IsRunning).Returns(true);
 
             ApplicationMock.Setup(o => o.Host).Returns(PitchHostMock.Object);
             Pitch = ApplicationMock.Object;
             CommandsAccess = new PitchCommandsAccess((IPitchCommandsAccessOwner)CommandsAccessOwnerMock.Object);
-
-            
         }
 
         [TestMethod]
@@ -54,7 +53,7 @@ namespace PitchApplicationTest {
         [TestMethod]
         public void MoveNextCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.MoveNextCommand, true);
+            CommandEnabledTest(Pitch.MoveNextCommand, false);
         }
 
         [TestMethod]
@@ -66,7 +65,7 @@ namespace PitchApplicationTest {
         [TestMethod]
         public void MovePreviousCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.MovePreviousCommand, true);
+            CommandEnabledTest(Pitch.MovePreviousCommand, false);
         }
 
         [TestMethod]
@@ -78,7 +77,7 @@ namespace PitchApplicationTest {
         [TestMethod]
         public void ReturnToStartCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.ReturnToStartCommand, true);
+            CommandEnabledTest(Pitch.ReturnToStartCommand, false);
         }
 
         [TestMethod]
@@ -90,19 +89,20 @@ namespace PitchApplicationTest {
         [TestMethod]
         public void SkipNextMoveCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.SkipNextMoveCommand, true);
+            CommandEnabledTest(Pitch.SkipNextMoveCommand, false);
         }
 
         [TestMethod]
         public void RunCommandEnabledTest() {
+
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandEnabledTest(Pitch.RunCommand, true);
+            CommandEnabledTest(Pitch.RunCommand, false);
         }
 
         [TestMethod]
         public void RunCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.RunCommand, true);
+            CommandEnabledTest(Pitch.RunCommand, true);
         }
 
         [TestMethod]
@@ -114,7 +114,7 @@ namespace PitchApplicationTest {
         [TestMethod]
         public void JumpCommandDisabledTest() {
             SetupApplicationCommandsAccessOwnerMock(true, true, true);
-            CommandDisabledTest(Pitch.JumpCommand, true);
+            CommandEnabledTest(Pitch.JumpCommand, false);
         }
 
         private void SetupApplicationMock()
@@ -156,39 +156,22 @@ namespace PitchApplicationTest {
             PitchCommandsAccessOwnerMock.Setup(o => o.EnabledJumpCommand()).Returns(commandsEnabled);
         }
 
-        private void CommandDisabledTest(ICommand command, bool disabled) {
-            CommandDisabledTest(command, disabled, b => {}, true);
+        private void CommandEnabledTest(ICommand command, bool disabled) {
+            CommandEnabledTest(command, disabled, b => { }, true);
         }
 
-        private void CommandDisabledTest(ICommand command, bool disabled, Action<bool> settingDisableAction) {
-            CommandDisabledTest(command, disabled, b => { }, true);
+        private void CommandEnabledTest(ICommand command, bool disabled, Action<bool> settingEnableAction) {
+            CommandEnabledTest(command, disabled, b => { }, true);
         }
 
-        private void CommandDisabledTest(ICommand command, bool disabled, Action<bool> settingDisableAction, bool settingDisabled) {
-            settingDisableAction?.Invoke(settingDisabled);
-            CallDisableCommands();
-            Assert.AreEqual(disabled, !command.Enabled);
-        }
-
-        private void CommandEnabledTest(ICommand command, bool enabled) {
-            CommandEnabledTest(command, enabled, b => { }, true);
-        }
-
-        private void CommandEnabledTest(ICommand command, bool enabled, Action<bool> settingEnableAction) {
-            CommandEnabledTest(command, enabled, b => { }, true);
-        }
-
-        private void CommandEnabledTest(ICommand command, bool enabled, Action<bool> settingEnableAction, bool settingEnabled) {
+        private void CommandEnabledTest(ICommand command, bool disabled, Action<bool> settingEnableAction, bool settingEnabled) {
             settingEnableAction?.Invoke(settingEnabled);
-            CallRefreshCommandAccess();
-            Assert.AreEqual(enabled, command.Enabled);
+            CallRefreshCommandAccess(disabled);
+            Assert.AreEqual(!disabled, command.Enabled);
         }
 
-        private void CallRefreshCommandAccess() {
-            CommandsAccess.RefreshCommandsAccess(false);
-        }
-        private void CallDisableCommands() {
-            CommandsAccess.RefreshCommandsAccess(true);
+        private void CallRefreshCommandAccess(bool disabled) {
+            CommandsAccess.RefreshCommandsAccess(disabled);
         }
     }
 }
