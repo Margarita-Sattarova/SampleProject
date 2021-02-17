@@ -6192,19 +6192,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\MASA\\.nuget\\packages\\": {}
+    "C:\\Users\\Margarita\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+      "projectUniqueName": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
       "projectName": "PitchUndergroundApplicationTest",
-      "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
-      "packagesPath": "C:\\Users\\MASA\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplicationTest\\obj\\",
+      "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\PitchUndergroundApplicationTest.csproj",
+      "packagesPath": "C:\\Users\\Margarita\\.nuget\\packages\\",
+      "outputPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplicationTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\MASA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Margarita\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6216,13 +6220,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
-              "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj"
+            "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj": {
+              "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchApplicationTest\\PitchApplicationTest.csproj"
             },
-            "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
-              "projectPath": "C:\\Users\\MASA\\source\\repos\\SampleProject\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj"
+            "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj": {
+              "projectPath": "E:\\GLSampleApplicationUpdated\\SampleProject\\PitchUndergroundApplication\\PitchUndergroundApplication.csproj"
             }
           }
         }
@@ -6235,7 +6238,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestAdapter": {
             "target": "Package",
@@ -6273,7 +6275,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
