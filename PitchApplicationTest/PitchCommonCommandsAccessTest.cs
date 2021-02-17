@@ -38,16 +38,10 @@ namespace PitchApplicationTest {
             CommonPitchHostMock = ApplicationMock.As<ICommonPitchHost>();
             PitchHostMock = new Mock<IPitchHost>();
             PitchHostMock.Setup(o => o.CanMove).Returns(true);
-            //var commonPitchHost = PitchHostMock.As<ICommonPitchHost>();
-            //commonPitchHost.Setup(o => o.IsInFocus).Returns(true);
-            //commonPitchHost.Setup(o => o.IsOnLine).Returns(true);
-            //commonPitchHost.Setup(o => o.IsRunning).Returns(true);
 
             ApplicationMock.Setup(o => o.Host).Returns(PitchHostMock.Object);
             Pitch = ApplicationMock.Object;
             CommandsAccess = new PitchCommandsAccess((IPitchCommandsAccessOwner)CommandsAccessOwnerMock.Object);
-
-            
         }
 
         [TestMethod]
